@@ -9,8 +9,9 @@ abstract class base_controller
     final function handle()
     {
         $this->beforeHandle();
-        $this->main();
+        $result = $this->main();
         $this->afterHandle();
+        return $result;
     }
 
     final function beforeHandle()
@@ -21,5 +22,20 @@ abstract class base_controller
     final function afterHandle()
     {
 
+    }
+
+    public function layout($name = 'common')
+    {
+        return '';
+    }
+
+    public function style($styles)
+    {
+        return [];
+    }
+
+    public function javaScripts()
+    {
+        return [];
     }
 }
