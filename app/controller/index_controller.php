@@ -8,7 +8,7 @@ class index_controller extends base_controller
     function main()
     {
         return [
-            'layou_element::index',
+            'layout_element',
             [
 
             ]
